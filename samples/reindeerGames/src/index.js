@@ -17,7 +17,7 @@
 
 /**
  * When editing your questions pay attention to your punctuation. Make sure you use question marks or periods.
- * Make sure the first answer is the correct one. Set at least 4 answers, any extras will be shuffled in.
+ * Make sure the first answer is the correct one. Set at least 3 answers, any extras will be shuffled in.
  */
 var questions = [
     {
@@ -351,9 +351,9 @@ function onSessionEnded(sessionEndedRequest, session) {
 
 // ------- Skill specific business logic -------
 
-var ANSWER_COUNT = 4;
+var ANSWER_COUNT = 3;
 var GAME_LENGTH = 5;
-var CARD_TITLE = "Trivia"; // Be sure to change this for your skill.
+var CARD_TITLE = "Titan Trivia"; // Be sure to change this for your skill.
 
 function getWelcomeResponse(callback) {
     var sessionAttributes = {},
@@ -553,7 +553,7 @@ function handleGetHelpRequest(intent, session, callback) {
     // Do not edit the help dialogue. This has been created by the Alexa team to demonstrate best practices.
 
     var speechOutput = "I will ask you " + GAME_LENGTH + " multiple choice questions. Respond with the number of the answer. "
-        + "For example, say one, two, three, or four. To start a new game at any time, say, start game. "
+        + "For example, say one, two, or three. To start a new game at any time, say, start game. "
         + "To repeat the last question, say, repeat. "
         + "Would you like to keep playing?",
         repromptText = "To give an answer to a question, respond with the number of the answer . "
